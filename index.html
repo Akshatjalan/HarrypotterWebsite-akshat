@@ -37,12 +37,13 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
- 
+
                     <li class="nav__item">
                         <div class="dropdown">
                             <button class="dropbtn">Explore
                                 <i class="fa fa-caret-down"></i>
                             </button>
+                            
                             <div class="dropdown-content">
                                 <a href="movie.html">Movies</a>
                                 <a href="book.html">Books</a>
@@ -80,12 +81,22 @@
                         </div>
 
                     </li>
+                    <li class="nav__item">
+                        <div class="song__item">
+                            <img src="/assets/img/monophy.gif" id = 'icon' >
+                        </div>
+                    </li>
+                    <audio id = 'mysong'>
+                        <source src="/assets/video/HedwigsTheme.mp3" type="audio/mp3">
+                    </audio>
+                
                 </ul>
                 <br>
+                
                 <div class="nav__dark">
-                    <!-- Theme change button -->
-                    <span class="change-theme-name">Gryffindor Theme</span>
+                    <!-- -->
                     <i class="ra  ra-venomous-snake  ra-1x change-theme" id="theme-button"></i>
+                    
                 </div>
 
                 <i class="ri-close-line nav__close" id="nav-close"></i>
@@ -109,6 +120,7 @@
                     <span class="home__data-subtitle">Welcome Potter Heads</span>
                     <h1 class="home__data-title">Discover the Wizard World</b></h1>
                     <a href="#about" class="button">Explore &#x21AF;</a>
+                    
 
                 </div>
 
@@ -369,6 +381,26 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+
+    <!--=============== Song script ===============-->
+    <script> 
+        var mysong = document.getElementById('mysong');
+        var icon = document.getElementById('icon');
+
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src = '/assets/img/equl.gif'
+            }
+            else{
+                mysong.pause();
+                icon.src = '/assets/img/monophy.gif'
+            }
+        }
+
+    </script>
+
 </body>
 
 </html>

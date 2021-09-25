@@ -147,6 +147,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'bluu';
+  src: url("/BluuNext-Titling.otf");
+}
+
 body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
@@ -1475,3 +1480,11 @@ label:hover{
 }
 
 
+#icon {
+  position: fixed;
+  top: 80px;
+  right: 0px;
+  width: 80px;
+  cursor: pointer;
+  align-self: center;
+}
