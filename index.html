@@ -81,15 +81,6 @@
                         </div>
 
                     </li>
-                    <li class="nav__item">
-                        <div class="song__item">
-                            <img src="/assets/img/monophy.gif" id = 'icon' >
-                        </div>
-                    </li>
-                    <audio id = 'mysong'>
-                        <source src="/assets/video/HedwigsTheme.mp3" type="audio/mp3">
-                    </audio>
-                
                 </ul>
                 <br>
                 
@@ -382,24 +373,6 @@
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 
-
-    <!--=============== Song script ===============-->
-    <script> 
-        var mysong = document.getElementById('mysong');
-        var icon = document.getElementById('icon');
-
-        icon.onclick = function(){
-            if(mysong.paused){
-                mysong.play();
-                icon.src = '/assets/img/equl.gif'
-            }
-            else{
-                mysong.pause();
-                icon.src = '/assets/img/monophy.gif'
-            }
-        }
-
-    </script>
 
 </body>
 
