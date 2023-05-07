@@ -4,7 +4,8 @@
 
 
 ## Description
-- Perosnal website of Harry potter Wizard Verse, using HTML, CSS & JAVASCRIPT.
+- My Harry Potter website is a one-stop-shop for Potterheads. It includes a comprehensive starter pack with essential information, self-explanatory videos and GIFs, and a fun quiz revealing your Hogwarts house, boggart, and patronus. Built with CSS, HTML, and JavaScript, the website is responsive and visually appealing, designed to be user-friendly and accessible for Potterheads of all ages and skill levels
+- Website of Harry potter Wizard Verse, using HTML, CSS & JAVASCRIPT.
 - Contains animations when scrolling.
 - Includes a dark and light mode.
 - Developed first with the desktop First methodology, then for mobile.
