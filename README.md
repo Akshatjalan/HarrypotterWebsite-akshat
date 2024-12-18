@@ -1,7 +1,5 @@
+<h1 align="center">The Harry Potter Wizarding Website</h1>
 <img src="https://github.com/Akshatjalan/HarrypotterWebsite-akshat/blob/master/assets/img/fac.png" height="250px" align="right"/>
-
-<h1 align="center">The Ultimate Harry Potter Wizarding Website</h1>
-
 ## Description
 
 - My Harry Potter website is a one-stop-shop for Potterheads. It includes a comprehensive starter pack with essential information, self-explanatory videos and GIFs, and a fun quiz revealing your Hogwarts house, boggart, and patronus. Built with CSS, HTML, and JavaScript, the website is responsive and visually appealing, designed to be user-friendly and accessible for Potterheads of all ages and skill levels
@@ -11,7 +9,7 @@
 - Developed first with the desktop First methodology, then for mobile.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
-## [Live App Demo](https://akshatjalan.github.io/HarrypotterWebsite-akshat/)
+## [Live App Demo](https://akshatjalan.github.io/HarryPotter-akshat/)
 
 ![Alt text](https://github.com/Akshatjalan/HarrypotterWebsite-akshat/blob/master/assets/img/website.png?raw=true "Main Page")
 
