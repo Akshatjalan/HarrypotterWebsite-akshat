@@ -1,9 +1,9 @@
 <img src="https://github.com/Akshatjalan/HarrypotterWebsite-akshat/blob/master/assets/img/fac.png" height="250px" align="right"/>
 
-<h1 align="center">Responsive Harry Potter Website 🪄 </h1>
-
+<h1 align="center">Responsive Harry Potter Website</h1>
 
 ## Description
+
 - My Harry Potter website is a one-stop-shop for Potterheads. It includes a comprehensive starter pack with essential information, self-explanatory videos and GIFs, and a fun quiz revealing your Hogwarts house, boggart, and patronus. Built with CSS, HTML, and JavaScript, the website is responsive and visually appealing, designed to be user-friendly and accessible for Potterheads of all ages and skill levels
 - Website of Harry potter Wizard Verse, using HTML, CSS & JAVASCRIPT.
 - Contains animations when scrolling.
@@ -11,18 +11,16 @@
 - Developed first with the desktop First methodology, then for mobile.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
-    
- ##   [Live App Demo](https://akshatjalan.github.io/HarrypotterWebsite-akshat/)
- 
- 
- ![Alt text](https://github.com/Akshatjalan/HarrypotterWebsite-akshat/blob/master/assets/img/website.png?raw=true "Main Page")
+## [Live App Demo](https://akshatjalan.github.io/HarrypotterWebsite-akshat/)
 
-## Contact 
+![Alt text](https://github.com/Akshatjalan/HarrypotterWebsite-akshat/blob/master/assets/img/website.png?raw=true "Main Page")
+
+## Contact
 
  <h3 align="center">
   <img src="https://github.com/Akshatjalan/HarrypotterWebsite-akshat/blob/master/assets/img/signature.png" height="100px" align="center"/>
 </h3>
-  <p align="center"> 
+  <p align="center">
 
   <a href="https://github.com/Akshatjalan">
     <img src="https://github.com/Akshatjalan/akshat/blob/master/Color/Github.svg" width="30" height="30" hspace="20">
