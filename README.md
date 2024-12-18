@@ -1,6 +1,6 @@
 <img src="https://github.com/Akshatjalan/HarrypotterWebsite-akshat/blob/master/assets/img/fac.png" height="250px" align="right"/>
 
-<h1 align="center">Responsive Harry Potter Website</h1>
+<h1 align="center">The Ultimate Harry Potter Wizarding Website</h1>
 
 ## Description
 
