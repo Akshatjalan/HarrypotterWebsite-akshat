@@ -798,6 +798,13 @@ input {
   bottom: 3rem;
 }
 
+model-viewer {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  margin: 20px auto;
+}
+
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: 0.6rem;
@@ -1383,6 +1390,7 @@ label:hover {
   z-index: 1;
   border-radius: 4px;
   opacity: 95%;
+  width: 60%;
 }
 
 .dropdown-content a {
