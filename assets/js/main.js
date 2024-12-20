@@ -357,191 +357,93 @@ function patronuss() {
 
 //Boggart quiz function
 function bog() {
-  var dementor = 0;
-  var Voldemort = 0;
-  var height = 0;
-  var dark = 0;
+  const boggarts = {
+    dementor: {
+      name: "Dementors",
+      icon: "assets/img/boggart/dementor.gif",
+      secondIcon: "assets/img/creatures/dementor.gif",
+      description: "Your boggart would take the form of Dementors!",
+    },
+    Voldemort: {
+      name: "Voldemort",
+      icon: "assets/img/boggart/voldemort.gif",
+      secondIcon: "assets/img/boggart/volde.gif",
+      description: "Your boggart would take the form of Voldemort!",
+    },
+    height: {
+      name: "Height",
+      icon: "assets/img/boggart/height.webp",
+      secondIcon: "assets/img/boggart/heightRid.gif",
+      description: "Your boggart would take the form of heights!",
+    },
+    dark: {
+      name: "Unknown",
+      icon: "assets/img/boggart/unknown.gif",
+      secondIcon: "assets/img/boggart/unknownRid.gif",
+      description: "Your boggart would be Fear of Unknown!",
+    },
+    spider: {
+      name: "Spiders",
+      icon: "assets/img/boggart/spiders.gif",
+      secondIcon: "assets/img/boggart/spiderRid.webp",
+      description: "Your boggart would take the form of Spiders!",
+    },
+    snake: {
+      name: "Death",
+      icon: "assets/img/boggart/death.gif",
+      secondIcon: "assets/img/boggart/deathRid.gif",
+      description: "Your boggart would take the form of Death!",
+    },
+    water: {
+      name: "Deep Water",
+      icon: "assets/img/boggart/water.gif",
+      secondIcon: "assets/img/boggart/waterRid.gif",
+      description: "Your boggart would take the form of Deep Water!",
+    },
+    clown: {
+      name: "Scary Clown",
+      icon: "assets/img/boggart/clown.gif",
+      secondIcon: "assets/img/boggart/clownRid.gif",
+      description: "Your boggart would take the form of a Scary Clown!",
+    },
+  };
 
-  // Define the questions
-  var questions = ["classs", "Spell", "behave", "position", "Wierd"];
+  let scores = {};
+  Object.keys(boggarts).forEach((key) => (scores[key] = 0));
 
-  // Check if all questions are answered
-  let allAnswered = true;
-  questions.forEach((question) => {
-    const answer = document.querySelector(`input[name="${question}"]:checked`);
-    if (!answer) {
-      allAnswered = false; // If any question is not answered, set this to false
-    } else {
-      if (answer.value == "dementor") {
-        dementor += 1;
-      } else if (answer.value == "Voldemort") {
-        Voldemort += 1;
-      } else if (answer.value == "height") {
-        height += 1;
-      } else if (answer.value == "dark") {
-        dark += 1;
-      }
-    }
-  });
-
-  // If not all questions are answered, show an alert and return
-  if (!allAnswered) {
-    swal({
-      title: "Please answer all questions!",
-      icon: "warning",
-      buttons: true,
-    });
+  const questions = document.querySelectorAll("input[type='radio']:checked");
+  if (questions.length < 8) {
+    swal("Incomplete", "Please answer all questions!", "warning");
     return;
   }
 
-  // Continue with the rest of your boggart logic...
-  if (dementor * 20 > 50) {
-    swal({
-      title: "Dementors",
-      text: "Your boggart would take the form of Dementors!",
-      icon: "https://i.pinimg.com/originals/16/1a/f0/161af08eb8cdfccb7682517c88d041c2.gif",
-      imageAlt: "Custom image",
-      buttons: {
-        text: "Riddikulus",
-      },
-    }).then(function () {
-      swal({
-        icon: "https://data.whicdn.com/images/189727288/original.gif",
-        imageAlt: "Custom image",
-        timer: 3000,
-        buttons: false,
-      });
-    });
-  }
+  questions.forEach((question) => {
+    const value = question.value;
+    if (scores.hasOwnProperty(value)) {
+      scores[value]++;
+    }
+  });
 
-  if (Voldemort * 20 > 50) {
-    swal({
-      title: "Voldemort",
-      text: "Your boggart would take the form of Voldemort!",
-      icon: "https://img.wattpad.com/447b078a424bf3259ffe9508927e0b04c6c15bd2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f314a626b393147387a45586858673d3d2d3630313530363437372e313536346437306565373734393731373430313231323932393235392e676966",
-      imageAlt: "Custom image",
-      buttons: {
-        text: "Riddikulus",
-      },
-    }).then(function () {
-      swal({
-        icon: "assets/img/volde.gif",
-        imageAlt: "Custom image",
-        timer: 3000,
-        buttons: false,
-      });
-    });
-  }
+  let result = Object.keys(scores).reduce((prev, current) =>
+    scores[prev] > scores[current] ? prev : current
+  );
 
-  if (height * 20 > 50) {
+  const boggart = boggarts[result];
+  swal({
+    title: `${boggart.name}`,
+    text: boggart.description,
+    icon: boggart.icon,
+    imageAlt: boggart.name,
+    buttons: {
+      text: "Riddikulus",
+    },
+  }).then(function () {
     swal({
-      title: "Height",
-      text: "Your boggart would take the form of Height!",
-      icon: "https://64.media.tumblr.com/4e64267311a51cd7ac208e370e199858/tumblr_n2rtkenPiF1tw44xdo1_500.gifv",
-      imageAlt: "Custom image",
-      buttons: {
-        text: "Riddikulus",
-      },
-    }).then(function () {
-      swal({
-        icon: "https://thumbs.gfycat.com/BiodegradableSmugGeese-size_restricted.gif",
-        imageAlt: "Custom image",
-        timer: 3000,
-        buttons: false,
-      });
+      icon: boggart.secondIcon,
+      buttons: false,
+      timer: 10000,
     });
-  }
-
-  if (dark * 20 > 50) {
-    swal({
-      title: "Dark",
-      text: "Your boggart would take the form of Darkness!",
-      icon: "https://i.gifer.com/3sEB.gif",
-      imageAlt: "Custom image",
-      buttons: {
-        text: "Riddikulus",
-      },
-    }).then(function () {
-      swal({
-        icon: "https://i.redd.it/g332nv274vf51.gif",
-        imageAlt: "Custom image",
-        timer: 3000,
-        buttons: false,
-      });
-    });
-  }
-
-  if (
-    dark * 20 < 50 &&
-    height * 20 < 50 &&
-    dementor * 20 < 50 &&
-    Voldemort * 20 < 50
-  ) {
-    swal({
-      title: "Scary Clown",
-      text: "Your boggart would take the form of Scary Clown!",
-      icon: "http://orig06.deviantart.net/b68d/f/2017/253/c/f/it_2017_pennywise_jumpscare___gif_code__by_dafominanimat-dbmzj6k.gif",
-      imageAlt: "Custom image",
-      buttons: {
-        text: "Riddikulus",
-      },
-    }).then(function () {
-      swal({
-        icon: "https://i.gifer.com/3YJ.gif",
-        imageAlt: "Custom image",
-        buttons: false,
-        timer: 3000,
-      });
-    });
-  }
-
-  if (
-    dark * 20 == 40 &&
-    height * 20 == 40 &&
-    dementor * 20 < 50 &&
-    Voldemort * 20 < 50
-  ) {
-    swal({
-      title: "BASILISK",
-      text: "Your boggart would take the form of Basilisk!",
-      icon: "https://data.whicdn.com/images/201143518/original.gif",
-      imageAlt: "Custom image",
-      buttons: {
-        text: "Riddikulus",
-      },
-    }).then(function () {
-      swal({
-        icon: "http://media1.giphy.com/media/FV8nzuvp7pcHu/giphy.gif?w=144",
-        imageAlt: "Custom image",
-        buttons: false,
-        timer: 3000,
-      });
-    });
-  }
-
-  if (
-    dark * 20 < 50 &&
-    height * 20 < 30 &&
-    dementor * 20 < 50 &&
-    Voldemort * 20 < 50
-  ) {
-    swal({
-      title: "Spiders",
-      text: "Your boggart would take the form of Spider!",
-      icon: "https://i.pinimg.com/originals/2c/54/99/2c549919fbe6f8841f562fe6643110fb.gif",
-      imageAlt: "Custom image",
-      buttons: {
-        text: "Riddikulus",
-      },
-    }).then(function () {
-      swal({
-        icon: "https://c.tenor.com/G3dgtWqmNCUAAAAC/spider-idk.gif",
-        imageAlt: "Custom image",
-        buttons: false,
-        timer: 3000,
-      });
-    });
-  }
+  });
 }
 
 //Wand quiz function
